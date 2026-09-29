@@ -1,0 +1,21 @@
+{
+  "name": "ralphthon-lost-and-found",
+  "version": "0.1.0",
+  "private": true,
+  "description": "랄프톤 유실물 플랫폼 — 분실자 검색, 습득물 등록, AI 기반 소유권 검증",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env src/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env --watch src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
+    "make-admin": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env scripts/make-admin.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "express": "^5.2.1",
+    "multer": "^2.4.0"
+  }
+}
